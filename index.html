@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/bs4/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+    <title>Todo MVC</title>
+</head>
+
+<body onload="init()">
+    <div class="toDo-board">
+        <header>
+            <h1 id="title" class="animated tada">Todo List</h1>
+            <!-- <h4>MVC - Model-View-Controller</h4> -->
+        </header>
+
+        <div class="filters">
+            <select id="todo-filter" onchange="onSetFilterDisplay(this.value)">
+                <option value="" disabled selected>Filter By</option>
+                <option value="all">All</option>
+                <option value="active">Active</option>
+                <option value="done">Done</option>
+            </select>
+            <select id="sort-filter" onchange="todosOrdered(this.value)">
+                <option value="" disabled selected>Show By</option>
+                <option value="txt">Text</option>
+                <option value="timestamp">TIME CREATED</option>
+                <option value="importance">IMPORTANCE</option>
+            </select>
+        </div>
+
+
+        <ul class="todo-list"></ul>
+        <section>
+            <h4>
+                Todos:
+                <span class="todo-count"></span>
+                Active:
+                <span class="active-count"></span>
+            </h4>
+        </section>
+
+    
+        <div class="add-todo-container">
+            <input id="newTodoTxt" type="text" placeholder="What needs to be done?" />
+            <input id="impotance" type="num" placeholder="Importance between 1-3" />
+            <button class="btn btn-danger "onclick="onAddTodo()">Add</button>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bs4/js/bootstrap.min.js"></script>
+    <script src="js/util-service.js"></script>
+    <script src="js/todo-service.js"></script>
+    <script src="js/main.js"></script>
+   
+    
+</body>
+
+</html>

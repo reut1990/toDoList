@@ -1,0 +1,130 @@
+html, body {
+    height: 100%;/*OnLY WITH IT IT CENTERED!!!!!! */
+}
+
+body {
+    display: flex;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    justify-content: center;
+    align-items: center; 
+
+    
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+    padding: 5px;
+}
+
+.todo-list li{
+  display: flex;
+  margin: 5px auto;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background-color: burlywood;
+  opacity: 0.8;
+  border-radius: 125px;
+  font-family:cursive, sans-serif;
+
+}
+
+ section{
+    background-color: cornsilk;
+    font-family: mali;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.chore{
+    font-size: 25px;
+    font-weight: 900;
+}
+.importance{
+    background-color: aqua;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding:2px ;
+    margin: 0 10px;
+}
+.toDo-board{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    border-radius: 25px;
+    background-image: url("/img/background.jpg");
+    background-size:contain;
+   
+
+}
+
+
+.filters{
+    display: flex;
+    justify-content:space-evenly ;
+}
+.done {
+    text-decoration: line-through;
+}
+
+.btn-delete {
+    align-self: end; 
+    flex-direction: row;
+    border: 0;
+    border-radius: 50%;
+    background-color:white;
+    cursor: pointer;
+    float:right;
+}
+
+.btn-delete:hover {
+    background-color: brown;
+    color:white;
+}
+
+.btn-delete:active {
+    background-color: red;
+
+}
+
+.add-todo-container {
+    background-color:lightpink;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    color: chocolate;
+}
+
+header {
+    text-align: center;
+}
+
+
+#title{
+   font-family: mali;
+    text-shadow: 2px 2px 2px grey;
+    background-color: cornsilk;
+}
+
+
+@media(min-width:420px){/* tablet  */
+    .toDo-board{
+            width: 90%;
+
+    }
+}
+
+@media(min-width:1024px){/* desktop */
+    .toDo-board{
+          width: 60%;;
+      }
+}
