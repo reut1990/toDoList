@@ -57,7 +57,7 @@ body {
     flex-direction: column;
     background-color: aqua;
     border-radius: 25px;
-    background-image: url("img/background.jpg");
+    background-image: url("/img/background.jpg");
     background-size:contain;
    
 
