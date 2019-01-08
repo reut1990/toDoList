@@ -18,7 +18,6 @@ function render() {
 function renderTodos() {
     var todos = getTodos();
     var strHtmls = todos.map(function (todo) {
-        var timeStamp = todo.createdAt;
         return `<li class="${(todo.isDone) ? 'done' : ''}" onclick="onTodoClicked('${todo.id}')">
                    <div><span class="chore">${todo.txt}</span> <span class="importance"> ${todo.importance} </span></div>
                     <button class="btn-delete" onclick="onDeleteTodo('${todo.id}', event)"> ✖ </button>
@@ -42,6 +41,10 @@ function onSetFilterDisplay(statusFilter) {
     render();
 }
 
+function onTodosOrdered(orderFilter){
+    todosOrdered(orderFilter);
+    render();  
+}
 
 function onAddTodo() {
     var elNewTodoTxt = document.querySelector('#newTodoTxt');
