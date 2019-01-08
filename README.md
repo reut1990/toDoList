@@ -1,3 +1,5 @@
 # toDoList
 live demo:
-https://github.com/reut1990/toDoList.git 
+https://reut1990.github.io/toDoList/ 
+
+Exanple of coding "MVC"-MODAL, VIEW, CONTROLLER.
